@@ -5,14 +5,9 @@
  * 
  */
 
-// change your Twitter API consumer_key, consumer_secret, access_token_key, and access_token_secret below
 
-var _ = require('underscore'), express = require('express'), app = express(), server = require('http').createServer(app), path = require('path'), io = require('socket.io').listen(server), twitter = require('twitter'), sys = require('sys'), exec = require('child_process').exec, stateInfo = require("./states.js"), twit = new twitter({
-	consumer_key : "xxx",
-	consumer_secret : "xxx",
-	access_token_key : "xxx",
-	access_token_secret : "xxx"
-});
+var _ = require('underscore'), express = require('express'), app = express(), server = require('http').createServer(app), moment = require('moment'), path = require('path'), io = require('socket.io').listen(server), twitter = require('twitter'), sys = require('sys'), exec = require('child_process').exec, stateInfo = require("./states.js"), twitterCodes = require('./twitterCodes.js').getTwitterCodes(), twit = new twitter(twitterCodes);
+
 
 exports.getTweets = function(searchTerm, socket) {
 
