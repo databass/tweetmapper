@@ -11,11 +11,7 @@ var TM = (function() {
 	var currentSearchTerm = "";
 	var imageCount = 0;
 	var domainRange = [ 0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200 ];
-	// var colorScheme = [ "#ffffd9", "#edf8b1", "#c7e9b4", "#7fcdbb",
-	// "#41b6c4", "#1d91c0", "#225ea8", "#253494", "#081d58" ];
-	// var colorScheme =
-	// ['rgb(247,252,253)','rgb(224,236,244)','rgb(191,211,230)','rgb(158,188,218)','rgb(140,150,198)','rgb(140,107,177)','rgb(136,65,157)','rgb(129,15,124)','rgb(77,0,75)','rgb(44,0,44)','rgb(33,0,31)']
-	var colorScheme = [ 'rgb(236,226,241)', 'rgb(218,212,235)', 'rgb(198,200,230)', 'rgb(166,189,219)', 'rgb(103,169,207)', 'rgb(54,144,192)', 'rgb(2,129,138)', 'rgb(1,108,89)', 'rgb(1,70,54)', 'rgb(1,50,33)', 'rgb(1,30,22)' ];
+	var colorScheme = ['rgb(247,252,240)','rgb(224,243,219)','rgb(204,235,197)','rgb(168,221,181)','rgb(123,204,196)','rgb(78,179,211)','rgb(43,140,190)','rgb(8,104,172)','rgb(8,64,129)', 'rgb(7,64,88)', 'rgb(5,64,54)']
 	var generateLegend = function() {
 
 		var legendColorScheme = colorScheme.reverse();
@@ -96,7 +92,7 @@ var TM = (function() {
 
 				imageCount = 0;
 
-				d3.selectAll("path.state").style("fill", "#FEFEFE");
+				d3.selectAll("path.state").style("fill", "#EEEEEE");
 				d3.selectAll("path.state").select("title").remove();
 
 				socket.emit("cancelStates");
@@ -181,6 +177,7 @@ var TM = (function() {
 
 				var keycode = (event.keyCode ? event.keyCode : event.which);
 				if (keycode === 13) {
+
 					twitterSearchHandler();
 				}
 			});
