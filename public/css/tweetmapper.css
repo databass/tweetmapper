@@ -1,0 +1,311 @@
+/* tweetmapper.css */
+body,html {
+	padding: 0;
+	margin: 0;
+	background-color: #EEEEFF;
+	height: 100%;
+}
+
+h1 {
+	text-align: center;
+	display: inline;
+	margin-bottom: 0;
+}
+
+header {
+	height: 80px;
+	display: block;
+	background: linear-gradient(#EEEEFF, #CCCCFF);
+	min-width: 1000px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-color: midnightblue;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+}
+
+footer {
+	display: block;
+	height: 80px;
+	vertical-align: middle;
+	margin: 0;
+	padding-top: .5em;
+	text-align: left;
+	font-size: 1em;
+	padding-left: 350px;
+	background: linear-gradient(#FFFFFF, #EEEEEE)
+}
+
+#LogoContainer {
+	width: 350px;
+	display: inline-block;
+	font-size: 3em;
+	margin-left: 160px;
+	vertical-align: top;
+	text-align: left;
+	text-shadow: 4px 4px 12px rgba(150, 150, 215, 1);
+}
+
+#LogoContainer .subtitle {
+	margin-top: 0;
+	line-height: .35em;
+	font-size: .45em;
+	font-weight: 100;
+	letter-spacing: .1em;
+}
+
+#UpdatesContainer {
+	width: 900px;
+	height: 70px;
+	text-align: left;
+	margin-left: 130px;
+	margin-bottom: 1em;
+	display: block;
+}
+
+#StatusContainer {
+	vertical-align: top;
+	display: inline-block;
+	width: 340px;
+	margin-top: 0em;
+	margin-left: .5em;
+	text-align: left;
+	height: 50px;
+}
+
+#SearchStatusContainer {
+	display: block;
+	padding-top: .5em;
+	margin-left: .5em;
+	text-align: left;
+	color: black;
+	height: 1em;
+}
+
+#SearchStatusContainer .searchTerm {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#CounterContainer {
+	display: block;
+	margin-left: .5em;
+	margin-top: 1.2em;
+	text-align: left;
+	color: black;
+	height: 1em;
+}
+
+#CounterContainer .counter {
+	font-weight: bold;
+	color: green;
+}
+
+#UserContainer {
+	width: 500px;
+	height: 50px;
+	display: inline-block;
+	text-align: center;
+	margin-top: 1em;
+	vertical-align: top;
+}
+
+#UserContainer span {
+	margin-top: .5em;
+	width: 50px;
+	height: 50px;
+}
+
+#UserContainer span img {
+	width: 48px;
+	height: 48px;
+	margin-left: 1px;
+	margin-right: 1px;
+	cursor: pointer;
+}
+
+#ClickContainer {
+	display: none;
+	margin-left: .5em;
+	margin-top: 1em;
+	text-align: left;
+	color: black;
+	height: 1em;
+	font-style: italic;
+}
+
+#MapContainer {
+	display: inline-block;
+	background: linear-gradient(#EEFFEE, #EEEEFF);
+	text-align: left;
+	padding-left: 20px;
+	padding-top: .75em;
+	min-height: 660px;
+	height: calc(100% - 170px);
+	height: -webkit-calc(100% - 170px);
+	height: -moz-calc(100% - 170px);
+	min-width: 1000px;
+	width: 100%;
+	margin: 0;
+}
+
+#LegendContainer {
+	position: absolute;
+	top: 380px;
+	left: 720px;
+}
+
+#InputContainer {
+	text-align: center;
+	padding-top: .95em;
+	vertical-align: top;
+	display: inline-block;
+	margin-right: 10%;
+}
+
+#SearchInput {
+	margin-top: .1em;
+	width: 200px;
+	font-size: 1.6em;
+	vertical-align: middle;
+	height: 2em;
+	z-index: 10000;
+}
+
+.error {
+	color: red;
+}
+
+p.error {
+	font-size: 1.2em;
+	color: black;
+}
+
+.verticalTop {
+	vertical-align: top;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+text {
+	font-size: 11px !important;
+}
+
+path.state {
+	cursor: pointer;
+}
+
+/* modals */
+.tweetsContainer {
+	
+}
+
+.tweetsContainer .tweetContainer:nth-child(even) {
+	background: linear-gradient(#FEFEFE, #EEEEEE);
+}
+
+.tweetsContainer .tweetContainer:nth-child(odd) {
+	background: linear-gradient(#EEEEEE, #FEFEFE);
+}
+
+.tweetContainer {
+	margin-top: .5em;
+	margin-bottom: .5em;
+	border-color: #333;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.tweetContainer .userImage {
+	display: inline-block;
+	width: 14%;
+	text-align: center;
+	margin-top: .25em;
+	vertical-align: top;
+}
+
+.tweetContainer .tweetBlock {
+	display: inline-block;
+	width: 84%;
+	vertical-align: top;
+}
+
+.tweetContainer .tweetBlock .whoWhen {
+	display: block;
+}
+
+.tweetContainer .tweetBlock .whoWhen .user {
+	display: inline;
+	font-weight: 700;
+}
+
+.tweetContainer .tweetBlock .whoWhen .user .username {
+	margin-left: 0;
+}
+
+.tweetContainer .tweetBlock .whoWhen .user .screenname {
+	margin-left: 1em;
+}
+
+.tweetContainer .tweetBlock .whoWhen .location {
+	display: inline;
+	margin-left: 1em;
+	font-weight: 300;
+}
+
+.tweetContainer .tweetBlock .whoWhen .timestamp {
+	display: inline;
+	font-weight: 100;
+	font-size: .8em;
+	margin-left: 1em;
+	float: right;
+}
+
+.tweetContainer .tweetBlock .tweet {
+	display: block;
+	font-weight: 300;
+	width: 100%;
+}
+
+#myTweetsModal .modal-dialog {
+	top: 3vh;
+	min-width: 600px;
+	width: 55%;
+}
+
+#myTweetsModal .modal-body {
+	overflow-y: auto;
+	height: 60vh;
+}
+
+#myTweetsModal .modal-title .searchTerm {
+	margin-left: 2em;
+}
+
+#myErrorModal .modal-body,#myWaitModal .modal-body {
+	font-size: 1.2em;
+}
+
+/* bootstrap override */
+.modal-dialog {
+	top: 200px;
+}
+​
