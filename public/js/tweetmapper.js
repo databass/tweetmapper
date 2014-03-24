@@ -132,14 +132,12 @@ var TM = (function() {
 
 				if (imageCount === 0) {
 					$("#UserContainer").fadeIn();
-					;
 				}
 
 				if (!$("#clickContainer").is(":visible")) {
 					$("#ClickContainer").fadeIn();
 				}
 				image = document.createElement('img');
-				image.title = 'foo';
 
 				$("<img />").attr("title", username + ' @' + screenName + ' from ' + userLocation).attr("src", image_url).load(function() {
 
