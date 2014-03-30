@@ -43,37 +43,28 @@ exports.getStates = function () {
 
             "reg": "Georgia|GA",
             "rs": "GA"
-        },
-
-        {
+        }, {
             "reg": "Kentucky|KY",
             "rs": "KY"
         }, {
-
             "reg": "Arizona|AZ",
             "rs": "AZ"
         }, {
-
             "reg": "Alabama|AL",
             "rs": "AL"
         }, {
-
             "reg": "Mississippi|MS",
             "rs": "MS"
         }, {
-
             "reg": "Tennessee|TN",
             "rs": "TN"
         }, {
-
             "reg": "Wyoming|WY",
             "rs": "WY"
         }, {
-
             "reg": "Oklahoma|OK",
             "rs": "OK"
         }, {
-
             "reg": "Washington DC|DC",
             "rs": "DC"
         }, {
