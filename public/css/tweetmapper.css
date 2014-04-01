@@ -80,7 +80,10 @@ footer {
 	margin-left: .5em;
 	text-align: left;
 	color: black;
-	height: 1em;
+	height: 2em;
+	width: 340px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 #SearchStatusContainer .searchTerm {
@@ -91,7 +94,7 @@ footer {
 #CounterContainer {
 	display: block;
 	margin-left: .5em;
-	margin-top: 1.2em;
+	margin-top: .5em;
 	text-align: left;
 	color: black;
 	height: 1em;
