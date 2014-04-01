@@ -82,6 +82,7 @@ footer {
 	color: black;
 	height: 2em;
 	width: 340px;
+        overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
