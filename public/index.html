@@ -3,15 +3,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>TweetMapper.us</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
-    <link rel="stylesheet" href="css/tweetmapper.css">
+<meta charset="utf-8" />
+<title>TweetMapper.us</title>
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="css/tweetmapper.css">
+
+
 </head>
 
 <body>
+
+
     <div class="modal" id="myTweetsModal">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -31,17 +36,17 @@
 
     <div class="modal" id="myHoverTweetsModal">
         <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title">Recent Tweets <span class="bold"></span></h4>
-                </div>
-
-                <div class="modal-body"></div>
-                    <div class="modal-footer">
-                    <button type='button' class='btn btn-success' data-dismiss="modal">Close</button>
-                </div>
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h4 class="modal-title">Recent Tweets <span class="bold"></span></h4>
             </div>
+
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type='button' class='btn btn-success' data-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
     </div>
 
@@ -49,15 +54,15 @@
 
     <header>
 
-        <section id="LogoContainer">
-	    <h1>TweetMapper.us</h1>
-        <div class="subtitle">Make your own TweetMap</div>
-        </section>
+    <section id="LogoContainer">
+	<h1>TweetMapper.us</h1>
+    <div class="subtitle">Make your own TweetMap</div>
+    </section>
     
-        <section id="InputContainer">
-            <input placeholder="Search for Tweets" type="text" id="SearchInput"></input>
-	    <button type='button' class='btn btn-success btn-large' value="Get TwitterStates" id="SearchButton">Make TweetMap</button>
-        </section>
+    <section id="InputContainer">
+	<input placeholder="Search for Tweets" type="text" id="SearchInput"></input>
+	<button type='button' class='btn btn-success btn-lg' value="Get TwitterStates" id="SearchButton">Make TweetMap</button>
+    </section>
 
     </header>
 
@@ -66,18 +71,19 @@
     
 	<div id="MapContainer">
     
-            <section id="UpdatesContainer">
-                <section id="StatusContainer">
-                    <div id="SearchStatusContainer"></div>
-                    <div id="CounterContainer"></div>
-                    <div id="ClickContainer">Click on any state to browse tweets</div>
-                </section>
+    <section id="UpdatesContainer">
+    <section id="StatusContainer">
+    <div id="SearchStatusContainer"></div>
+    <div id="CounterContainer"></div>
+    <div id="ClickContainer">Click on any state to browse tweets</div>
+    </section>
 
-                <section id="UserContainer">
-                    <span class="sampledImage" id="image0"></span><span class="sampledImage" id="image1"></span><span class="sampledImage" id="image2"></span><span class="sampledImage" id="image3"></span><span class="sampledImage" id="image4"></span>    
-                    <span class="sampledImage" id="image5"></span><span class="sampledImage" id="image6"></span><span class="sampledImage" id="image7"></span><span class="sampledImage" id="image8"></span></span> 
-               </section>
-            </section>
+    <section id="UserContainer">
+        <span class="sampledImage" id="image0"></span><span class="sampledImage" id="image1"></span><span class="sampledImage" id="image2"></span><span class="sampledImage" id="image3"></span><span class="sampledImage" id="image4"></span>    
+        <span class="sampledImage" id="image5"></span><span class="sampledImage" id="image6"></span><span class="sampledImage" id="image7"></span><span class="sampledImage" id="image8"></span></span> 
+       
+    </section>
+    </section>
             
 	<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 		<svg xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -381,17 +387,17 @@
 
 </div>
 
-    <footer>
-        <div>
-            TweetMapper.us was created by David Byman
-        </div>
-        <div>
-            Feedback: david.byman@gmail.com
-        </div>
-        <div style="margin-top: .5em">
-            <a href="https://github.com/databass/tweetmapper" target="_blank">Get the code on GitHub</a>
-       </div>
-    </footer>
+<footer>
+   <div>
+        TweetMapper.us was created by David Byman
+  </div>
+  <div>
+        Feedback: david.byman@gmail.com
+  </div>
+  <div style="margin-top: .5em">
+       <a href="https://github.com/databass/tweetmapper" target="_blank">Get the code on GitHub</a>
+  </div>
+</footer>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.js" charset="utf-8"></script>
@@ -413,24 +419,28 @@ $(document).ready(function() {
 
 <script id="TweetsTemplate" type="text/template">
 
-    <div class="tweetsContainer">
-        <% _.each(tweets, function(tweet) { %> 
-            <div class="tweetContainer">
-                <section class="userImage"><img src="<%= tweet.image_url %>"></img></section><section class="tweetBlock"><section class="whoWhen"><section class="user"><span class="username"><%= tweet.name %></span><span class="screenname"><%= tweet.screen_name %></span><span class="location"><%= tweet.location %></span></section><section class="timestamp"><%= tweet.date %></section></section><section class="tweet"><%= tweet.text %></section></section>
-            </div>
-        <% }); %>
-    </div>
+	<div class="tweetsContainer">
+    <% _.each(tweets, function(tweet) { %> 
+        <div class="tweetContainer">
+			<section class="userImage"><img src="<%= tweet.image_url %>"></img></section><section class="tweetBlock"><section class="whoWhen"><section class="user"><span class="username"><%= tweet.name %></span><span class="screenname"><%= tweet.screen_name %></span><span class="location"><%= tweet.location %></span></section><section class="timestamp"><%= tweet.date %></section></section><section class="tweet"><%= tweet.text %></section></section>
+		</div>
+    <% }); %>
+	</div>
 
-</script>  
+ </script>  
  
  
-<script id="HoverTweetsTemplate" type="text/template">
+ <script id="HoverTweetsTemplate" type="text/template">
 
-    <div class="tweetContainer">
-        <section class="userImage"><%=states.length %> Tweets</section>
-    </div>
 
-</script>    
+ 
+        <div class="tweetContainer">
+            <section class="userImage"><%=states.length %> Tweets</section>
+        </div>
+
+
+
+ </script>    
    
 </body>
 </html>
