@@ -42,10 +42,20 @@ exports.getTweets = function(searchTerm, socket) {
 		twit.search(searchTerm, searchParam, function(data) {
 			console.log('data is ' + JSON.stringify(data));
 
+		var formatErrorMessage = function(errorObject) {
+			var errorMessage = errorObject.message;
+			var errorCode = errorObject.code;
+			if (errorCode === 88) {
+				errorMessage +=". Please try again in a few minutes";
+			}
+			return errorMessage;
+			
+		}
 
-			if (data !== undefined && data.errors !== undefined) {
+
+			if (data !== undefined && data.data !== undefined) {
 				console.log('error');
-				socket.emit('error', data.errors[0]['message']);
+				socket.emit('errorMessage', formatErrorMessage(JSON.parse(data['data'])['errors'][0]));
 
 			}
 
